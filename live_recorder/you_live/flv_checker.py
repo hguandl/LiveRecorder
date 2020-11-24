@@ -22,7 +22,7 @@ class Flv(object):
         file_name = os.path.basename(os.path.realpath(self.path))
         file_short_name, file_extension = os.path.splitext(file_name)
         
-        path_new = file_folder + "\\" + file_short_name + "-checked0.flv"
+        path_new = os.path.join(file_folder, file_short_name + "-checked0.flv")
         print(path_new)
         with open(self.path,"rb") as origin:
             with open(path_new,"wb+") as dest:
